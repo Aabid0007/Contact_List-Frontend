@@ -7,15 +7,16 @@ import DeleteContact from '../Crud/DeleteContact/DeleteContact'
 const ContactContainer = () => {
     const [editModalOpen, setEditModalOpen] = useState(false);
     const [deleteModalOpen, setdeleteModalOpen] = useState(false);
-   
+
     const searchData = useSelector(state => state.data.data)
     const { data, loading, error, currentPage, pageSize, searchQuery } = useSelector((state) => state.data);
+    console.log(pageSize);
 
     useEffect(() => {
         if (searchQuery !== '' || currentPage !== 1 || pageSize !== 5) {
             getDataInfo({ searchQuery, currentPage, pageSize });
         }
-    }, [ searchQuery, currentPage, pageSize]);
+    }, [searchQuery, currentPage, pageSize]);
 
     return (
         <div className='page_content_section_table'>
@@ -40,7 +41,7 @@ const ContactContainer = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {data.map((contact, index) => (
+                    {Array.isArray(data) && data.map((contact, index) => (
                         <tr key={contact._id}>
                             <td>{index + 1 + (currentPage - 1) * pageSize}</td>
                             <td><div className='profile'><img src={`http://localhost:3001/${contact.image}`} alt="" />{`${contact.firstName} ${contact.lastName}`}</div></td>
