@@ -116,17 +116,18 @@ const getData = createSlice({
                 state.error = "Some error occurred";
             })
 
-            // Edit contact
+            // Contcat Id fetch
             .addCase(getContactById.fulfilled, (state, action) => {
-                state.loading = false;
-                state.contactById = action.payload;
+                state.loading = false;                
             })
+            
+             // Edit contact
             .addCase(editContact.pending, (state) => {
                 state.loading = true;
             })
             .addCase(editContact.fulfilled, (state, action) => {
-                state.loading = false;
-                state.contactById = action.payload;
+                state.loading = false;   
+                state.data = action.payload; 
             })
             .addCase(editContact.rejected, (state, action) => {
                 state.loading = false;

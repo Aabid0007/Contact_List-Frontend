@@ -49,7 +49,7 @@ const ContactContainer = () => {
                             <td>{contact.phone}</td>
                             <td>
                                 <div className='contact_action'>
-                                    <button className="contact_btn edit_btn" onClick={() => setEditModalOpen(contact._id)}>
+                                    <button className="contact_btn edit_btn" onClick={() => setEditModalOpen(contact._id)}>                  
                                         <i className="fa-solid fa-pen"></i>
                                     </button>
                                     <button className="contact_btn delete_btn" onClick={() => setdeleteModalOpen(contact._id)}>
