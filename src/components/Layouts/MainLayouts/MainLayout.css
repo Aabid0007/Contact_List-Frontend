@@ -1,0 +1,113 @@
+.MainPage {
+    background-color: #f1f1f1;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  .Main_Heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px ;
+  }
+ 
+  .contactPage{
+    padding: 20px 20px 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    min-height: 70vh;
+  }
+  .addContactBtn{
+    display: flex;
+    justify-content: center;
+  }
+  .addBtn{
+    border: none;
+    background-color: #1f1fda;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+  }
+  .subSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ShowList{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  #showList{
+    width: 50px;
+    height: 25px;
+  }
+
+.search_box{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search_box input {
+  width: 350px;
+  padding: 12px 15px 12px 31px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.search_box span{
+  position: absolute;
+  left: 4px;
+}
+input[type="text"]:focus-visible{
+ outline: 1px solid #4318FF ;
+}
+.pagination{
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.pagination button{
+  padding: 7px 12px;
+  border-radius: 7px;
+  border: 1px solid #F4F7FE;
+  background: none;
+  box-shadow: 0 1px 3px 0 grey;
+}
+.pagination button:hover {
+  border: 1px solid #4318FF;
+}
+button.active{
+  border: 1px solid #4318FF;
+}
+.paginationBtn{
+  display: flex;
+  gap: 5px;
+}
+[disabled]{
+  cursor: not-allowed;
+  border: none;
+}
+[disabled]:hover {
+  border: 1px solid #fff !important;
+}
+.overlay {
+  background: rgba(5, 3, 16, 0.80);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+}
+button{
+  cursor: pointer;
+}
