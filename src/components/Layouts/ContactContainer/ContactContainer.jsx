@@ -63,7 +63,7 @@ const ContactContainer = () => {
             </table>
 
             <div className='message'>
-                {!loading && searchData.length === 0 && <p>No data found</p>}
+                {searchData.length === 0 && <p>No data found</p>}
                 {
                     loading && <div className="loading"> Loading ... </div>
                 }
