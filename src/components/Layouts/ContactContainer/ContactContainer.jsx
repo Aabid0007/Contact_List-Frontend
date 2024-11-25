@@ -10,7 +10,7 @@ const ContactContainer = () => {
 
     const searchData = useSelector(state => state.data.data)
     const { data, loading, error, currentPage, pageSize, searchQuery } = useSelector((state) => state.data);
-    console.log(pageSize);
+    
 
     useEffect(() => {
         if (searchQuery !== '' || currentPage !== 1 || pageSize !== 5) {
