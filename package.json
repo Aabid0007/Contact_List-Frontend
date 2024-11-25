@@ -1,7 +1,6 @@
 {
   "name": "contact-list",
   "private": true,
-  "homepage": "http://Aabid0007.github.io/Contact_List-Frontend",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
