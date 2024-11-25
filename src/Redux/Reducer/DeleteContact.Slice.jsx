@@ -4,7 +4,7 @@
 
 // const deleteContact = createAsyncThunk("deleteContact", async (id) => {
 //     try {
-//         const response = await axios.delete(`https://contact-list-backend-1jwz.onrender.com/api/contacts/${id}`);
+//         const response = await axios.delete(`https://contact-list-backend-0zle.onrender.com/api/contacts/${id}`);
 //         console.log(response.data);
 //         return id;
 //     } catch (error) {
