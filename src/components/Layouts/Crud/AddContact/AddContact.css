@@ -1,18 +1,22 @@
 .AddForm {
     width: 500px;
     position: absolute;
-    top: 102px;
+    top: 90px;
     left: 454px;
     z-index: 99;
     overflow-y: scroll;
     height: 82vh;
+    background-color: #fff;
+    padding: 18px 0px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
-.AddContact{
+/* .AddContact{
     background-color: #fff;
     padding: 7px 20px 35px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-}
+} */
 
 .heading h2 {
     font-size: 30px;
