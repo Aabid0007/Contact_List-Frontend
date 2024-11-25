@@ -23,7 +23,7 @@ const EditContact = ({ editModalClose, contactId }) => {
           setValue("lastName", contactData.lastName || '');
           setValue("email", contactData.email || '');
           setValue("phone", contactData.phone || '');
-          setImagePreview(`http://localhost:3001/${contactData.image}`);
+          setImagePreview(`https://contact-list-backend-1jwz.onrender.com/${contactData.image}`);
         }
       } catch (error) {
         console.error("Error fetching contact data:", error);

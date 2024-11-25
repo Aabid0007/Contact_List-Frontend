@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // get all contact
 export const getDataInfo = createAsyncThunk('getDataInfo', async ({ searchQuery, currentPage, pageSize }) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/contacts/?searchQuery=${searchQuery}&currentPage=${currentPage}&pageSize=${pageSize}`,);
+        const response = await axios.get(`https://contact-list-backend-1jwz.onrender.com/api/contacts/?searchQuery=${searchQuery}&currentPage=${currentPage}&pageSize=${pageSize}`,);
         return response.data;
     } catch (error) {
         throw error;
@@ -14,7 +14,7 @@ export const getDataInfo = createAsyncThunk('getDataInfo', async ({ searchQuery,
 // Create contact
 export const createContact = createAsyncThunk('createContact', async (data) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/contacts',data);
+      const response = await axios.post('https://contact-list-backend-1jwz.onrender.com/api/contacts',data);
       console.log(response.data);
       return response.data;
     } catch (error) {
@@ -25,7 +25,7 @@ export const createContact = createAsyncThunk('createContact', async (data) => {
 // id Fetch
 export const getContactById = createAsyncThunk("getContactById", async (id) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/contacts/${id}`);
+        const response = await axios.get(`https://contact-list-backend-1jwz.onrender.com/api/contacts/${id}`);
         return response.data;
     } catch (error) {
         throw error;
@@ -35,7 +35,7 @@ export const getContactById = createAsyncThunk("getContactById", async (id) => {
 //   Edit contact
 export const editContact = createAsyncThunk("editContact", async ({ id, data }) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/contacts/${id}`, data);
+        const response = await axios.put(`https://contact-list-backend-1jwz.onrender.com/api/contacts/${id}`, data);
         return response.data;
     } catch (error) {
         throw error;
@@ -45,7 +45,7 @@ export const editContact = createAsyncThunk("editContact", async ({ id, data }) 
 // delete contact
 export const deleteContact = createAsyncThunk("deleteContact", async (id) => {
     try {
-        const response = await axios.delete(`http://localhost:3001/api/contacts/${id}`);
+        const response = await axios.delete(`https://contact-list-backend-1jwz.onrender.com/api/contacts/${id}`);
         console.log(response.data);
         return id;
     } catch (error) {

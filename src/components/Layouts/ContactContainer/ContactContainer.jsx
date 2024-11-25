@@ -44,7 +44,7 @@ const ContactContainer = () => {
                     {Array.isArray(data) && data.map((contact, index) => (
                         <tr key={contact._id}>
                             <td>{index + 1 + (currentPage - 1) * pageSize}</td>
-                            <td><div className='profile'><img src={`http://localhost:3001/${contact.image}`} alt="" />{`${contact.firstName} ${contact.lastName}`}</div></td>
+                            <td><div className='profile'><img src={`https://contact-list-backend-1jwz.onrender.com/${contact.image}`} alt="" />{`${contact.firstName} ${contact.lastName}`}</div></td>
                             <td>{contact.email}</td>
                             <td>{contact.phone}</td>
                             <td>
